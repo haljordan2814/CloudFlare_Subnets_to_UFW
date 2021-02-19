@@ -4,10 +4,11 @@ The purpose of this script is to utilize a cron job for the purpose of adding th
 This script assumes the following: 
 1. You have UFW installed and properly enabled
 2. You do not currently have any rules allowing 80 or 443 as this would defeat the purpose of locking down to only allowing CF subnets
-3. Example removal of previous 80/443 rules:
+3. You are NOT running as root. (the script will make edits to the root user crontab)
+4. Example removal of previous 80/443 rules:
  a. sudo ufw delete allow 443
  b. sudo ufw delete allow 80 
- 
+
  
 Credit where credit is due:
 1. Leow Kah Man THE original reason for this script to even exist https://www.leowkahman.com/2016/05/02/automate-raspberry-pi-ufw-allow-cloudflare-inbound/
