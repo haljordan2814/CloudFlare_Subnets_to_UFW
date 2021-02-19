@@ -1,5 +1,8 @@
 # CloudFlare_Subnets_to_UFW
-The purpose of this script is to utilize a cron job for the purpose of adding the list of subnets that CloudFlare uses in their various services. 
+The purpose of this script is to do the following: 
+1. Immediately add subnets from the public Cloudflare lists here: https://www.cloudflare.com/ips/ to your UFW service
+2. Then restrict those subnets to port 80 and 443. 
+3. utilize a cron job for the purpose of adding the list of subnets that CloudFlare uses in their various services. 
 
 This script assumes the following: 
 1. You have UFW installed and properly enabled
